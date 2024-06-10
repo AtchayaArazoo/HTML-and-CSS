@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form name="indexForm" action="login.py" method="post" enctype="multipart/form-data"></form>
+        <nav>
+        <div class="logo">
+
+            <a herf="">Date</a>
+        </div>
+        <ul>
+            
+            <li><a herf="">Home</a></li>
+            <li><a herf="">services</a></li>
+            <li><a herf="">About</a></li>
+            <li><a herf="">Gallery</a></li>
+            <li><a herf="">contact</a></li>
+        </ul>
+        <div class="menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+
+        </div>
+        </nav>
+        </div>
+            <div class="regform">
+                <h3 id="title">Sign Up</h3>
+                <form action="#">
+                    
+                    <div class="input" id="namefield">
+                        <label class="textlabel" for="name">User Name</label>
+                        <input type="text"  name="name">
+                    </div>
+                    <div class="input" >
+                        <label class="textlabel" for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input">
+                        <label class="textlabel" for="pwd">Password</label>
+                        <input type="password" id="password" name="pwd" required>
+                    </div>
+                    <p>Lost password <a href="#">click here!</a></p>
+                    <div class="btn">
+                        <button type="submit" id="signupbtn">Sign up</button>
+                        <button type="submit" id="signinbtn" class="disable">Sign in</button>
+
+                    </div>
+                    
+                </form>
+                
+        
+    <script>
+        const menu= document.querySelector('.menu')
+        const menuList= document.querySelector('nav ul')
+        menu.addEventListener('click',()=>{
+            menuList.classList.toggle('showmenu')
+        } )
+        
+        let signupbtn = document.getElementById("signupbtn");
+        let signinbtn = document.getElementById("signinbtn");
+        let namefield = document.getElementById("namefield");
+        let title = document.getElementById("title");
+        signinbtn.onclick=function(){
+            namefield.style.maxHeight= "0";
+            title.innerHTML ="Create Account";
+            signupbtn.classList.add("diaable");
+            signinbtn.classList.remove("disable");
+        }
+        
+        </script>
+            
+    </body>
+</html>
